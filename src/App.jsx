@@ -12,6 +12,12 @@ function getScoreClass(score) {
   return "red";
 }
 
+function truncateText(text, maxLength = 220) {
+  if (!text) return "Ma'lumot mavjud emas.";
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength).trim()}...`;
+}
+
 function App() {
   // Qaysi bo'lim tanlangan: top_rated / popular / upcoming
   const [movieType, setMovieType] = useState("top_rated");
@@ -192,7 +198,7 @@ function App() {
 
                   <div className="overview">
                     <h3>Overview</h3>
-                    <p>{movie.overview || "Ma'lumot mavjud emas."}</p>
+                    <p>{truncateText(movie.overview)}</p>
                   </div>
                 </div>
               ))

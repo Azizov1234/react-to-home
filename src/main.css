@@ -59,11 +59,22 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: #22254b;
+    color: #f5f5f5;
     padding: 1rem;
-    max-height: 100%;
+    max-height: 75%;
+    overflow-y: auto;
     transform: translateY(101%);
     transition: transform 0.3s ease-in;
+}
+
+.overview h3{
+    margin: 0 0 8px;
+}
+
+.overview p{
+    margin: 0;
+    line-height: 1.45;
 }
 
 .movie-info span {
